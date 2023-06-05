@@ -1,0 +1,47 @@
+html {
+    font-family: sans-serif;
+}
+
+button {
+    border: 0;
+    background: #944ce9;
+    color: white;
+    font-size: .9em;
+    display: inline-block;
+    margin-right: 0.2em;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+}
+
+h4 {
+    display: inline-block;
+    margin: 0 0.2em 0 0;
+}
+
+.container {
+    max-width: 768px;
+    margin: auto;
+}
+
+.charts-list {
+    text-align: right;
+    margin: 0.5em 0;
+}
+
+.actions {
+    display: flex;
+    margin-top: 1em;
+}
+
+.actions > div {
+    display: inline-block;
+    flex: auto;
+}
+
+.actions > div > h1 {
+    margin-right: 10pt;
+}
+
+.actions button.active {
+    background: #08ba08;
+}
