@@ -13,7 +13,7 @@ button {
     cursor: pointer;
 }
 
-h4 {
+h5 {
     display: inline-block;
     margin: 0 0.2em 0 0;
 }
@@ -29,17 +29,12 @@ h4 {
 }
 
 .actions {
-    display: flex;
     margin-top: 1em;
 }
 
 .actions > div {
     display: inline-block;
-    flex: auto;
-}
-
-.actions > div > h1 {
-    margin-right: 10pt;
+    margin-right: 1em;
 }
 
 .actions button.active {

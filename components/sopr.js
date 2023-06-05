@@ -98,18 +98,18 @@ export default function Sopr() {
             <canvas ref={canvasEl}/>
             <div className="actions">
                 <div>
-                    <h4>Period:</h4>
+                    <h5>Period:</h5>
                     <button className={period === 'day' ? 'active' : ''} onClick={() => setPeriod('day')}>day</button>
                     <button className={period === 'month' ? 'active' : ''} onClick={() => setPeriod('month')}>month</button>
                     <button className={period === 'year' ? 'active' : ''} onClick={() => setPeriod('year')}>year</button>
                 </div>
                 <div>
-                    <h4>Interval:</h4>
+                    <h5>Interval:</h5>
                     <button className={interval === '1h' ? 'active' : ''} onClick={() => setInterval('1h')}>1h</button>
                     <button className={interval === '24h' ? 'active' : ''} onClick={() => setInterval('24h')}>24h</button>
                 </div>
                 <div>
-                    <h4>Currency:</h4>
+                    <h5>Currency:</h5>
                     <button className={currency === 'btc' ? 'active' : ''} onClick={() => setCurrency('btc')}>btc</button>
                     <button className={currency === 'eth' ? 'active' : ''} onClick={() => setCurrency('eth')}>eth</button>
                     <button className={currency === 'ltc' ? 'active' : ''} onClick={() => setCurrency('ltc')}>ltc</button>
