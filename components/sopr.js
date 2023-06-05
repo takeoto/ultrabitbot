@@ -97,22 +97,26 @@ export default function Sopr() {
         <div className="chart-block">
             <canvas ref={canvasEl}/>
             <div className="actions">
-                <div>
-                    <h5>Period:</h5>
-                    <button className={period === 'day' ? 'active' : ''} onClick={() => setPeriod('day')}>day</button>
-                    <button className={period === 'month' ? 'active' : ''} onClick={() => setPeriod('month')}>month</button>
-                    <button className={period === 'year' ? 'active' : ''} onClick={() => setPeriod('year')}>year</button>
+                <div className="row">
+                    <div className="col">
+                        <h5>Period:</h5>
+                        <button className={period === 'day' ? 'active' : ''} onClick={() => setPeriod('day')}>day</button>
+                        <button className={period === 'month' ? 'active' : ''} onClick={() => setPeriod('month')}>month</button>
+                        <button className={period === 'year' ? 'active' : ''} onClick={() => setPeriod('year')}>year</button>
+                    </div>
+                    <div className="col">
+                        <h5>Interval:</h5>
+                        <button className={interval === '1h' ? 'active' : ''} onClick={() => setInterval('1h')}>1h</button>
+                        <button className={interval === '24h' ? 'active' : ''} onClick={() => setInterval('24h')}>24h</button>
+                    </div>
                 </div>
-                <div>
-                    <h5>Interval:</h5>
-                    <button className={interval === '1h' ? 'active' : ''} onClick={() => setInterval('1h')}>1h</button>
-                    <button className={interval === '24h' ? 'active' : ''} onClick={() => setInterval('24h')}>24h</button>
-                </div>
-                <div>
-                    <h5>Currency:</h5>
-                    <button className={currency === 'btc' ? 'active' : ''} onClick={() => setCurrency('btc')}>btc</button>
-                    <button className={currency === 'eth' ? 'active' : ''} onClick={() => setCurrency('eth')}>eth</button>
-                    <button className={currency === 'ltc' ? 'active' : ''} onClick={() => setCurrency('ltc')}>ltc</button>
+                <div className="row">
+                    <div className="col">
+                        <h5>Currency:</h5>
+                        <button className={currency === 'btc' ? 'active' : ''} onClick={() => setCurrency('btc')}>btc</button>
+                        <button className={currency === 'eth' ? 'active' : ''} onClick={() => setCurrency('eth')}>eth</button>
+                        <button className={currency === 'ltc' ? 'active' : ''} onClick={() => setCurrency('ltc')}>ltc</button>
+                    </div>
                 </div>
             </div>
         </div>
