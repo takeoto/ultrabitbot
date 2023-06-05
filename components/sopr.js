@@ -1,4 +1,5 @@
-import Chart from "chart.js/auto";
+import { Chart, registerables } from 'chart.js';
+import dynamic from 'next/dynamic';
 import React, {useEffect, useRef, useState} from "react";
 
 export default function Sopr() {
@@ -39,6 +40,9 @@ export default function Sopr() {
             labels.push(new Date(v['t'] * 1000).toLocaleDateString(undefined, {timeZone: 'UTC'}));
             weight.push(v['v']);
         });
+        const zoomPlugin = require('chartjs-plugin-zoom').default;
+        console.log(zoomPlugin)
+        Chart.register(zoomPlugin, ...registerables);
         const myLineChart = new Chart(ctx, {
             type: "line",
             data: {
@@ -76,6 +80,17 @@ export default function Sopr() {
                     }
                 },
                 plugins: {
+                    zoom: {
+                        zoom: {
+                            wheel: {
+                                enabled: true,
+                            },
+                            pinch: {
+                                enabled: true
+                            },
+                            mode: 'x',
+                        }
+                    },
                     legend: {
                         labels: {
                             // This more specific font property overrides the global property
